@@ -21,7 +21,7 @@
             </a>
             <span class="nav-item">
                 <a class="button" href="/login">Login</a>
-                <a class="button is-primary" href="/signup">Sign up</a>
+                <a class="button is-primary" href="/register">Sign up</a>
             </span>
         </div>
     </nav>
