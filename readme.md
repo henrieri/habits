@@ -1,3 +1,17 @@
+## About Habit Example Project
+
+This project is meant for potential employers to showcase something I have done.
+It uses Laravel framework with Vue in the front-end.
+
+As habits are one of the most important things for anyone to build in his life I decided to
+use this idea in my example application.
+
+User is able to register and then insert a list of habits this user will want to incorporate in his life.
+The system will keep track of those habits and user will have to check in daily to check whether all the habits
+were done. System will try to motivate the user by keeping track of the habits via points system and graphs.
+Also reminding with which tasks the user has not done yet.
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
