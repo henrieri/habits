@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
-</head>
-<body>
-
-    <div class="landing-container">
-        <h1>Habit Tracker</h1>
-        <p>Create and track life-changing habits! Measure your progress in life and add some extra motivation for building habits
-            with graphs and custom points system!
-        </p>
-        <div class="signup-login-container">
-            <div id="signup-login"></div>
+@extends('layouts.landing')
+@section('content')
+<section class="hero is-medium has-text-centered">
+    <div class="hero-head">
+        @include('components.header')
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Habit Tracker</h1>
+            <div class="subtitle">Create and track <strong>life-changing habits</strong>. Measure your progress in life and get some <br> extra
+                <strong>motivation</strong> for
+                building habits with graphs and custom points system! <br>
+                This is a demo application and not meant for serious use.
+            </div>
+            <div class="hero-buttons">
+                <a class="button is-primary is-medium" href="/register">Sign up</a>
+                <a class="button is-medium" href="/login">Login</a>
+            </div>
         </div>
     </div>
-    <script src="{{ mix('/js/landing.js') }}"></script>
-</body>
-</html>
+</section>
+@endsection
+

@@ -1,6 +1,23 @@
+// Import CSS framework Bulma
+@import "bulma";
+
+// Fonts
+@import "fonts/proxima-nova";
 
 // Variables
 @import "variables";
 
+// Default
+@import "default/body";
+
+// Helpers
+@import "helpers/alignment";
+
+// Components
+@import "components/header";
+@import "components/logo";
+@import "components/form";
+
 // Views
 @import "views/landing";
+@import "views/auth";

@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -20,9 +20,8 @@
         ]) !!};
     </script>
 </head>
-<body>
-    @yield('content')
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+<body class="layout-default">
+@yield('content')
+<script src="{{ mix('/js/landing.js') }}"></script>
 </body>
 </html>

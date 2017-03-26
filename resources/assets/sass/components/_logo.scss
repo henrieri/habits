@@ -1,0 +1,8 @@
+@mixin logo {
+  font-size: 40px;
+  color: $black;
+}
+
+.logo {
+  @include logo;
+}
