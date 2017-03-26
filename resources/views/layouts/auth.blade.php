@@ -21,7 +21,7 @@
     </script>
 </head>
 <body class="layout-default">
-<div class="auth">
+<div class="auth view--auth">
     <div class="container">
         <a href="/" class="logo">HabitTracker</a>
         @yield('content')

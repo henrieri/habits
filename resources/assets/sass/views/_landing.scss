@@ -1,7 +1,17 @@
-.header-logo {
-  @include logo;
-}
+.view--landing {
 
-.hero-body {
+  .header-logo {
+    @include logo;
+  }
 
+  .hero-body {
+    .title {
+      font-size: 4rem;
+      margin-bottom: 3rem;
+    }
+
+    .subtitle {
+      margin-bottom: 2.5rem;
+    }
+  }
 }

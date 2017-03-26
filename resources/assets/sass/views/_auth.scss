@@ -1,4 +1,4 @@
-.auth {
+.view--auth {
 
   .container {
     max-width: 360px;
@@ -19,4 +19,11 @@
     display: flex;
     flex-direction: column;
   }
+
+  .subtitle {
+    font-size: 1.8rem;
+    margin-top: 0.4rem;
+  }
+
+
 }

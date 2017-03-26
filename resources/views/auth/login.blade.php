@@ -31,10 +31,10 @@
                 Login
             </button>
             </div>
-            <div class="field">
-            <a class="has-text-centered is-fullwidth" href="{{ route('password.request') }}">
-                Forgot Your Password?
-            </a>
+            <div class="field has-text-centered">
+                <a href="{{ route('password.request') }}">
+                    Forgot Your Password?
+                </a>
             </div>
         </div>
 
