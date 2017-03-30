@@ -5,17 +5,21 @@
     <h2 class="subtitle">Login</h2>
     <form class="form" role="form" method="POST" action="{{ route('login') }}">
         <div class="box">
-
             {{ csrf_field() }}
-            <div class="field">
-                <label for="email" class="label">E-Mail Address</label>
-                <input id="email" type="email" class="input" name="email" value="{{ old('email') }}" required
-                       autofocus>
-            </div>
-            <div class="field">
-                <label for="password" class="label">Password</label>
-                <input id="password" type="password" class="input" name="password" required>
-            </div>
+
+            @include('components.forms.field', [
+                'name' => 'email',
+                'type' => 'email',
+                'label' => 'E-mail address',
+                'autoFocus' => true
+            ])
+
+            @include('components.forms.field', [
+                'name' => 'password',
+                'label' => 'Password',
+                'type' => 'password',
+                'autoFocus' => true
+            ])
           {{--  @if ($errors->has('password'))
                 <span class="help-block">
             <strong>{{ $errors->first('password') }}</strong>
@@ -34,6 +38,11 @@
             <div class="field has-text-centered">
                 <a href="{{ route('password.request') }}">
                     Forgot Your Password?
+                </a>
+            </div>
+            <div class="field has-text-centered">
+                <a href="{{ route('register') }}">
+                    Do not have account? Sign up instead.
                 </a>
             </div>
         </div>

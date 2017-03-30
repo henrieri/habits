@@ -21,6 +21,7 @@
     </script>
 </head>
 <body>
+    @include('app.components.side-nav')
     @yield('content')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
