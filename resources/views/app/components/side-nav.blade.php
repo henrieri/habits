@@ -4,13 +4,16 @@
             <a href="{{ route('dashboard') }}">Dashboard</a>
         </li>
         <li>
-            <a href="{{ route('dashboard') }}">Today</a>
+            <a href="{{ route('today') }}">Today</a>
         </li>
         <li>
-            <a href="{{ route('dashboard') }}">Habits</a>
+            <a href="{{ route('habits') }}">Habits</a>
         </li>
         <li>
-            <a href="{{ route('dashboard') }}">Progress</a>
+            <a href="{{ route('progress') }}">Progress</a>
+        </li>
+        <li>
+            <a href="{{ route('history') }}">History</a>
         </li>
     </ul>
 </aside>
