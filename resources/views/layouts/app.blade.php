@@ -21,8 +21,18 @@
     </script>
 </head>
 <body>
-    @include('app.components.side-nav')
-    @yield('content')
+
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3">
+            @include('app.components.side-nav')
+            </div>
+            <div class="column is-9">
+            @yield('content')
+            </div>
+        </div>
+
+    </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
