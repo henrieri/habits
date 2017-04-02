@@ -1,19 +1,19 @@
 <aside class="menu">
     <ul class="menu-list">
         <li>
-            <a href="{{ route('dashboard') }}">Dashboard</a>
+            <router-link to="/" exact>Dashboard</router-link>
         </li>
         <li>
-            <a href="{{ route('today') }}">Today</a>
+            <router-link to="/today">Today</router-link>
         </li>
         <li>
-            <a href="{{ route('habits') }}">Habits</a>
+            <router-link to="/habits">Habits</router-link>
         </li>
         <li>
-            <a href="{{ route('progress') }}">Progress</a>
+            <router-link to="/progress">Progress</router-link>
         </li>
         <li>
-            <a href="{{ route('history') }}">History</a>
+            <router-link to="/history">History</router-link>
         </li>
     </ul>
 </aside>

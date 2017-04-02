@@ -6,3 +6,7 @@
 .logo {
   @include logo;
 }
+
+.logo-light {
+  color: $black;
+}

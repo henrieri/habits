@@ -7,10 +7,14 @@
 
 require('./bootstrap');
 
+import router from './routes';
 
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });
+
+
 
 let LoginForm = Vue.component('LoginForm', require('./components/landing/LoginForm.vue'));

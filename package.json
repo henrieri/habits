@@ -17,6 +17,7 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
-    "bulma-scss": "^0.3.0-cc1"
+    "bulma-scss": "^0.3.0-cc1",
+    "vue-router": "^2.3.1"
   }
 }
