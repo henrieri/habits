@@ -17,12 +17,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
 
 Route::group(['prefix' => 'app'], function() {
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
     
+
+});
+
+
+Route::group(['prefix' => 'api'], function() {
+
+    Route::resource('habits', 'HabitsController');
 
 });

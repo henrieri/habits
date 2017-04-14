@@ -1,0 +1,18 @@
+.user-profile--container {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+
+  .user-profile--avatar {
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .user-profile--name {
+    vertical-align: middle;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+}

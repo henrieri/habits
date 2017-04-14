@@ -1,4 +1,14 @@
 <aside class="menu">
+    <div class="user-profile--container">
+        <div class="user-profile--avatar">
+            <figure class="image is-64x64">
+                <img src="https://s.gravatar.com/avatar/{{ hash('md5', user()->email) }}?s=80">
+            </figure>
+        </div>
+        <div class="user-profile--name">
+            {{ user()->name }}
+        </div>
+    </div>
     <ul class="menu-list">
         <li>
             <router-link to="/" exact>Dashboard</router-link>

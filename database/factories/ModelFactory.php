@@ -22,3 +22,17 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Habit::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->name,
+        'points' => rand(0,50)
+    ];
+});
+
+$factory->define(App\Day::class, function (Faker\Generator $faker) {
+
+    return [
+    ];
+});

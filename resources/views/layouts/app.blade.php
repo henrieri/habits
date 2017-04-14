@@ -22,20 +22,20 @@
 </head>
 <body>
     <div id="app">
-        <div class="container">
+
             @include('app.components.header')
             <div class="columns">
-                <div class="column is-3">
+                <div class="column is-2">
                     @include('app.components.side-nav')
                 </div>
-                <div class="column is-9">
+                <div class="column is-10">
                     <section class="section">
-                    <router-view></router-view>
+                        <router-view></router-view>
                     </section>
                 </div>
             </div>
 
-        </div>
+
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
