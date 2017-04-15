@@ -1,0 +1,17 @@
+
+.fade-leave-active {
+  display: none;
+}
+
+.fade-enter-active {
+  transition: transform .5s, opacity .5s
+}
+
+.fade-leave-to {
+  display: none;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}

@@ -12,14 +12,19 @@
 
 // Helpers
 @import "helpers/alignment";
+@import "helpers/mixins";
 
 // Components
 @import "components/header";
 @import "components/logo";
 @import "components/form";
 @import "components/user-profile";
+@import "components/table";
+@import "components/transitions";
+@import "components/toast";
 
 // Views
 @import "views/landing";
 @import "views/auth";
 @import "views/app";
+@import "views/habits";

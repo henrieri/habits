@@ -18,6 +18,14 @@ let routes = [
         component: require('./views/Habits')
     },
     {
+        path: '/habits/:id/edit',
+        component: require('./views/habits/CreateEdit')
+    },
+    {
+        path: '/habits/create',
+        component: require('./views/habits/CreateEdit')
+    },
+    {
         path: '/history',
         component: require('./views/History')
     }

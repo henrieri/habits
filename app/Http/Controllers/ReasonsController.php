@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Habit;
+use App\Reason;
 use Illuminate\Http\Request;
 
-class HabitsController extends Controller
+class ReasonsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class HabitsController extends Controller
      */
     public function index()
     {
-        $habits = user()->habits()->withCount('days')->withCount('daysFulfilled')->get();
-
-        return response()->json($habits);
+        //
     }
 
     /**
@@ -35,36 +33,36 @@ class HabitsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($habitId, Request $request)
     {
 
         $this->validate($request, $this->validationRules());
 
-        $habit = user()->habits()->save(new Habit($request->all()));
+        $reason = user()->habits()->find($habitId)->reasons()->save(new Reason([
+            'name' => $request->input('name')
+        ]));
 
-        return response()->json($habit->detailed());
+        return $reason;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Habit  $habit
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($habitId)
+    public function show($id)
     {
-        $habit = user()->habits()->with('reasons')->find($habitId);
-
-        return response()->json($habit->makeVisible('reasons'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Habit  $habit
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Habit $habit)
+    public function edit($id)
     {
         //
     }
@@ -73,37 +71,28 @@ class HabitsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Habit  $habit
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($habitId, Request $request)
+    public function update(Request $request, $id)
     {
-
-        $this->validate($request, $this->validationRules());
-
-        user()->habits()->where('id', $habitId)->update($request->all());
-
-        return $this->ok();
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Habit  $habit
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($habitId)
+    public function destroy($habitId, $reasonId)
     {
-        user()->habits()->where('id', $habitId)->delete();
-
-        return $this->ok();
+        user()->habits()->find($habitId)->reasons()->where('id', $reasonId)->delete();
     }
 
     private function validationRules() {
         return [
-            'name' => 'required|min:4',
-            'description' => 'required',
-            'points' => 'required|integer|min:0|max:100'
+            'name' => 'required|min:4'
         ];
     }
 }

@@ -30,4 +30,15 @@ Route::group(['prefix' => 'api'], function() {
 
     Route::resource('habits', 'HabitsController');
 
+    Route::group(['prefix' => 'habits'], function() {
+
+        Route::group(['prefix' => '{habit}'], function() {
+
+            Route::resource('reasons', 'ReasonsController');
+
+        });
+
+    });
+
+    Route::get('history', 'DaysController@index');
 });

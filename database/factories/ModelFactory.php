@@ -27,12 +27,19 @@ $factory->define(App\Habit::class, function (Faker\Generator $faker) {
 
     return [
         'name' => $faker->name,
-        'points' => rand(0,50)
+        'points' => rand(0,50),
+        'description' => $faker->text
     ];
 });
 
 $factory->define(App\Day::class, function (Faker\Generator $faker) {
-
     return [
     ];
 });
+
+$factory->define(App\Reason::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name
+    ];
+});
+

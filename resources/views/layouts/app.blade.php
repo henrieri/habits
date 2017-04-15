@@ -30,7 +30,10 @@
                 </div>
                 <div class="column is-10">
                     <section class="section">
-                        <router-view></router-view>
+                        <transition name="fade">
+                            <router-view></router-view>
+                        </transition>
+                        <toast></toast>
                     </section>
                 </div>
             </div>

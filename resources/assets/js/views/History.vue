@@ -1,4 +1,9 @@
 <template>
-    <h1 class="title">History</h1>
+    <div>
+         <h1 class="title">History</h1>
+        <table class="table">
+
+        </table>
+    </div>
 </template>
 

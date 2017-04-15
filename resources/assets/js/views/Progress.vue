@@ -1,3 +1,5 @@
 <template>
-    <h1 class="title">Progress</h1>
+    <div>
+         <h1 class="title">Progress</h1>
+    </div>
 </template>

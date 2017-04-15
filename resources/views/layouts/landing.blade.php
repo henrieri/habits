@@ -22,6 +22,6 @@
 </head>
 <body class="layout-default">
     @yield('content')
-<script src="{{ mix('/js/landing.js') }}"></script>
+{{--<script src="{{ mix('/js/landing.js') }}"></script>--}}
 </body>
 </html>
