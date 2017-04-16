@@ -97,7 +97,6 @@
         methods: {
             fetchHabits() {
                 api.get('habits').then(response => this.habits = response.data);
-
             },
             sortBy(sortKey)  {
                 this.sortDirection = (this.sortKey === sortKey) ? this.sortDirection === 'asc' ? 'desc' : 'asc' : 'asc';

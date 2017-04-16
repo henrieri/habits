@@ -30,4 +30,26 @@ class User extends Authenticatable
     public function habits() {
         return $this->hasMany(Habit::class);
     }
+
+    public static function boot()
+    {
+        static::created(function ($user) {
+
+            foreach (Habit::recommendedHabits() as $habitData) {
+                $model = $user->habits()->save(factory(Habit::class)->make([
+                    'name' => $habitData['name']
+                ]));
+
+
+                foreach($habitData['reasons'] as $reason) {
+                    $model->reasons()->save(factory(Reason::class)->make(
+                        ['name' => $reason]));
+                }
+            }
+
+        });
+
+
+        parent::boot();
+    }
 }

@@ -28,6 +28,6 @@
     </div>
 
 </div>
-<script src="{{ mix('/js/landing.js') }}"></script>
+{{--<script src="{{ mix('/js/landing.js') }}"></script>--}}
 </body>
 </html>

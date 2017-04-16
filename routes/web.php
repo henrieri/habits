@@ -40,5 +40,9 @@ Route::group(['prefix' => 'api'], function() {
 
     });
 
+    Route::get('today', 'DaysController@today');
+
+    Route::put('today/habits/{habit}', 'DaysController@updateStatus');
+
     Route::get('history', 'DaysController@index');
 });

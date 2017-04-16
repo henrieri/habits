@@ -25,5 +25,11 @@
         <li>
             <router-link to="/history">History</router-link>
         </li>
+        <li>
+            <form id="logout-form" action="/logout" method="post">
+                {{ csrf_field() }}
+                <a onclick="document.querySelector('#logout-form').submit(); return false;" href="/logout">Log out</a>
+            </form>
+        </li>
     </ul>
 </aside>

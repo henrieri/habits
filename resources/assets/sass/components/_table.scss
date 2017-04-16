@@ -2,5 +2,13 @@
 
   td {
     vertical-align: middle;
+
+    &.is-danger {
+      background-color: $danger;
+    }
+
+    &.is-success {
+      background-color: $success;
+    }
   }
 }

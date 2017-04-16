@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Day;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DaysController extends Controller
 {
@@ -16,6 +18,36 @@ class DaysController extends Controller
         $habits = user()->habits()->with('days')->get();
 
         return response()->json($habits);
+    }
+
+    public function today() {
+
+        $habits = user()->habits()->with('today')->get();
+
+        return response()->json($habits->makeVisible('today'));
+    }
+
+    public function updateStatus($habitId, Request $request) {
+
+        $habit = user()->habits()->findOrFail($habitId);
+
+        $today = $habit->today()->first();
+
+        if ($today) {
+            $today->pivot->fulfilled = $request->input('fulfilled');
+
+            $today->pivot->save();
+        }
+        else {
+
+            $today = Day::today();
+
+            $today->habits()->save($habit, [
+                'fulfilled' => $request->input('fulfilled')
+            ]);
+        }
+
+
     }
 
     /**
