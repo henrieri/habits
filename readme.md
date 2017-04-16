@@ -11,6 +11,9 @@ The system will keep track of those habits and user will have to check in daily 
 were done. System will try to motivate the user by keeping track of the habits via points system and graphs.
 Also reminding with which tasks the user has not done yet.
 
+### Demo
+
+https://habits.henrierilaid.me
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
