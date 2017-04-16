@@ -42,7 +42,9 @@ class HabitsController extends Controller
 
         $habit = user()->habits()->save(new Habit($request->all()));
 
-        return response()->json($habit->detailed());
+        $habit->reasons = [];
+
+        return response()->json($habit->makeVisible('reasons'));
     }
 
     /**
